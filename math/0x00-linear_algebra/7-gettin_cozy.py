@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
+"""Function that concatenates two matrices along a specific axis"""
+
+
 def cat_matrices2D(mat1, mat2, axis=0):
+    """
+    INPUT: two matrix
+    OUTPUT: the matrix concat horizontally with axis = 0 or vertically
+    """
+
     new_m = []
     if axis == 1:
         if len(mat1) != len(mat2):
