@@ -7,9 +7,9 @@ def add_matrices2D(mat1, mat2):
     INPUT: two matrix
     OUTPUT: A matrix containing the sum position by position
     """
-    len(mat1[0])
-    len(mat1)
-    if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
+    if len(mat1) != len(mat2):
+        return None
+    if len(mat1[0]) != len(mat2[0]):
         return None
     new_ma = list()
     ar = list()
