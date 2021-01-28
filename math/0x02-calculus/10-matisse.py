@@ -20,4 +20,4 @@ def poly_derivative(poly):
     for n in range(1, len(poly)):
         print(poly[n], n, n-1)
         der.append(poly[n] * n)
-    return der
+    return return der if any(der) else [0]
