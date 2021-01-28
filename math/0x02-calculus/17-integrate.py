@@ -14,7 +14,7 @@ def poly_integral(poly):
         return None
 
     inte = list()
-    inte.append(0)
+    inte.append(C)
 
     if len(poly) == 1:
         return [C]
