@@ -2,7 +2,7 @@
 """ INtegration """
 
 
-def poly_integral(poly):
+def poly_integral(poly, C=0):
     """
     INPUT: polinom
     OUTPUT integration polinom
@@ -10,7 +10,7 @@ def poly_integral(poly):
     if poly == [] or type(poly) is not list:
         return None
 
-    if type(poly[0]) is not int and type(poly[0]) is not float:
+    if poly == [] or type(poly) is not list or type(C) is not int:
         return None
 
     inte = list()
