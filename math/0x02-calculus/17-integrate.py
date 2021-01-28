@@ -19,7 +19,6 @@ def poly_integral(poly):
     if len(poly) == 1:
         return [C]
 
-    print(poly)
     for n in range(len(poly)):
         aux = poly[n] / (n + 1)
         if aux % 1 == 0:
