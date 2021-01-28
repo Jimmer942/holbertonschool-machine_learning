@@ -12,12 +12,13 @@ def poly_integral(poly, C=0):
 
     if poly == [] or type(poly) is not list or type(C) is not int:
         return None
+    if type(poly[0]) is not int and type(poly[0]) is not float:
+        return None
+    if len(poly) == 1:
+        return [C]
 
     inte = list()
     inte.append(C)
-
-    if len(poly) == 1:
-        return [C]
 
     for n in range(len(poly)):
         aux = poly[n] / (n + 1)
