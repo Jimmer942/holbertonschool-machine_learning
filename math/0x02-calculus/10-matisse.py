@@ -9,9 +9,10 @@ def poly_derivative(poly):
     """
     if poly == [] or type(poly) is not list:
         return None
-    for n in poly:
-        if type(n) is not int and type(n) is not float:
-            return None
+
+    if type(poly[0]) is not int and type(poly[0]) is not float:
+        return None
+
     der = list()
 
     if len(poly) == 1:
@@ -19,4 +20,5 @@ def poly_derivative(poly):
 
     for n in range(1, len(poly)):
         der.append(poly[n] * n)
-    return der if any(der) else [0]
+
+    return der
