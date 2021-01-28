@@ -9,9 +9,9 @@ def poly_derivative(poly):
     """
     if poly == [] or type(poly) is not list:
         return None
-    if type(poly[0]) is not int and type(poly[0]) is not float:
-        return None
-
+    for n in poly:
+        if type(n) is not int and type(n) is not float:
+            return None
     der = list()
 
     if len(poly) == 1:
