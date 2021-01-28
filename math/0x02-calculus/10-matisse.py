@@ -18,6 +18,5 @@ def poly_derivative(poly):
         return [0]
 
     for n in range(1, len(poly)):
-        print(poly[n], n, n-1)
         der.append(poly[n] * n)
-    return return der if any(der) else [0]
+    return der if any(der) else [0]
