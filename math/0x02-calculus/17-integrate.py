@@ -15,7 +15,7 @@ def poly_integral(poly, C=0):
     if type(poly[0]) is not int and type(poly[0]) is not float:
         return None
     if len(poly) == 1:
-        return [C]
+        return [C, poly[0]]
 
     inte = list()
     inte.append(C)
