@@ -7,9 +7,6 @@ def poly_integral(poly, C=0):
     INPUT: polinom
     OUTPUT integration polinom
     """
-    if poly == [] or type(poly) is not list:
-        return None
-
     if poly == [] or type(poly) is not list or type(C) is not int:
         return None
     if type(poly[0]) is not int and type(poly[0]) is not float:
