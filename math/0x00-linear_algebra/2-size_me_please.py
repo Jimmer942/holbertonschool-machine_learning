@@ -3,8 +3,9 @@
 
 
 def matrix_shape(matrix):
-    """INPUT: a matrix that wans to know the shape
-       OUTPUT: the shape of the given matrix
+    """
+    INPUT: a matrix that wans to know the shape
+    OUTPUT: the shape of the given matrix
     """
     m = list()
     arr = matrix[0]
