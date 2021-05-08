@@ -18,7 +18,9 @@ class Neuron():
 
         def W():
             return self.__W
+
         def b():
             return self.__b
+
         def A():
             return self.__A
