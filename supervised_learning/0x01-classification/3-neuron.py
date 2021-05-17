@@ -51,3 +51,36 @@ class Neuron():
             int: Private A.
         """
         return self.__A
+
+    def forward_prop(self, X):
+        """ Calculates neuron output.
+
+        Args:
+            X (ndarray): rows X's, cols examples.
+
+        Returns:
+            ndarray: vector with activation results using sigmoid.
+        """
+        # sum(W.X)
+        sum_WxX = np.matmul(self.__W, X)
+        # -sum(W.X) - b
+        z = sum_WxX + self.__b
+        # Sigmoid = 1 / 1 + e^(-sum(W.X) - b)
+        sigmoid_z = 1 / (1 + np.exp(-z))
+        self.__A = sigmoid_z
+        return self.__A
+
+    def cost(self, Y, A):
+        """Calculates the function cost of the neuron.
+        It was applied the Logistic Regression Cost Function.
+
+        Args:
+            Y (ndarray): the actual or correct values for the input data.
+            A (ndarray): activated output of the neuron for each example.
+
+        Returns:
+            float: calculated cost, better if cost -> 0 .
+        """
+        constant = -1 / A.shape[1]
+        summation = Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A)
+        return constant * summation.sum()

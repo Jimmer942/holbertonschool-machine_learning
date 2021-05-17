@@ -51,3 +51,21 @@ class Neuron():
             int: Private A.
         """
         return self.__A
+
+    def forward_prop(self, X):
+        """ Calculates neuron output.
+
+        Args:
+            X (ndarray): rows X's, cols examples.
+
+        Returns:
+            ndarray: vector with activation results using sigmoid.
+        """
+        # sum(W.X)
+        sum_WxX = np.matmul(self.__W, X)
+        # -sum(W.X) - b
+        z = sum_WxX + self.__b
+        # Sigmoid = 1 / 1 + e^(-sum(W.X) - b)
+        sigmoid_z = 1 / (1 + np.exp(-z))
+        self.__A = sigmoid_z
+        return self.__A
